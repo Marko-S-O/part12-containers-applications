@@ -1,0 +1,48 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20241008091746
+Username: MKYTÖSUO\ext
+RunAs User: MKYTÖSUO\ext
+Configuration Name: 
+Machine: MKYTÖSUO (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 20236
+PSVersion: 5.1.22621.4111
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.22621.4111
+BuildVersion: 10.0.22621.4111
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is exercise12_8.txt
+PS C:\Users\ext\part12-containers-applications\todo-app\todo-backend> docker compose -f docker-compose.dev.yml up -d
+time="2024-10-08T09:18:04+03:00" level=warning msg="Found orphan containers ([todo-app-container]) for this project. If
+you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to cle
+an it up."
+[+] Running 1/1
+ ✔ Container todo-backend-mongo-1  Started                                                                         0.3s
+PS C:\Users\ext\part12-containers-applications\todo-app\todo-backend> docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED        STATUS         PORTS                     NAMES
+6eb72de1da24   mongo     "docker-entrypoint.s…"   16 hours ago   Up 5 seconds   0.0.0.0:3456->27017/tcp   todo-backend-m
+ongo-1
+PS C:\Users\ext\part12-containers-applications\todo-app\todo-backend> docker exec -it 6eb72de1da24 bash
+    done: false
+  },
+  {
+    _id: ObjectId('6704cf2528eb94be5c964033'),
+    text: 'Use CLI fifth time to get both windows and Linux commands logged',
+    done: false
+  }
+]
+the_database> exit
+# exit
+Script done.
+root@6eb72de1da24:/# exit
+exit
+PS C:\Users\ext\part12-containers-applications\todo-app\todo-backend> Stop-transcript
+**********************
+Windows PowerShell transcript end
+End time: 20241008092047
+**********************
