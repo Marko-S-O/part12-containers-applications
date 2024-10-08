@@ -1,0 +1,32 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20241007114246
+Username: MKYTÖSUO\ext
+RunAs User: MKYTÖSUO\ext
+Configuration Name: 
+Machine: MKYTÖSUO (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 20236
+PSVersion: 5.1.22621.4111
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.22621.4111
+BuildVersion: 10.0.22621.4111
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is exercise12_2.txt
+PS C:\Users\ext\part12-containers-applications\script-answers> docker run -it ubuntu bash
+Status: Downloaded newer image for ubuntu:latest
+root@763c239a0b79:/# mkdir /usr/src/app
+root@763c239a0b79:/# touch /usr/src/app/index.js
+root@763c239a0b79:/# dir /usr/src/app
+index.js
+root@763c239a0b79:/# exit
+exit
+PS C:\Users\ext\part12-containers-applications\script-answers> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20241007114535
+**********************
