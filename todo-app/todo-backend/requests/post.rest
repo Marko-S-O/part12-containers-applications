@@ -2,6 +2,6 @@ POST http://localhost:3000/todos
 Content-Type: application/json
 
 {
-  "text": "Test todo http interface",
+  "text": "Test todo http interface 12.11",
   "done": false
 }
