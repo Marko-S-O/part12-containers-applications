@@ -1,0 +1,4 @@
+{
+    "watch": ["mongo", "redis", "routes", "util"],
+    "ext": "js"
+}

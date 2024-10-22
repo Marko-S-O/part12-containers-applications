@@ -21,6 +21,7 @@ router.get('/statistics', async (_, res) => {
   const counterValue = await getAsync('todoCount')
   const json = {'added_todos': counterValue}
   res.send(json);
+  console.log('yes!')
 });
 
 module.exports = router;

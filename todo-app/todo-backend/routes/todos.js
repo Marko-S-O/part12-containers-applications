@@ -40,18 +40,18 @@ const findByIdMiddleware = async (req, res, next) => {
 
 const singleRouter = express.Router();
 
-/* DELETE todo. */
+/* DELETE */
 singleRouter.delete('/', async (req, res) => {
   await req.todo.delete()  
   res.sendStatus(200);
 });
 
-/* GET todo. */
+/* GET */
 singleRouter.get('/', (req, res) => {
   res.json(req.todo)
 });
 
-/* PUT todo. */
+/* PUT */
 singleRouter.put('/', async (req, res) => {
 
   const { _id, text, done } = req.todo
@@ -60,10 +60,12 @@ singleRouter.put('/', async (req, res) => {
 
   const datafields = {}
   if (text) datafields.text = text
-  if (req.body.hasOwnProperty('done')) datafields.done = done;
+  if (req.body.hasOwnProperty('done')) datafields.done = true;
 
   Todo.findByIdAndUpdate(id, datafields, {new: true}).then(todo => {
+    
     if(todo) {
+      console.log('foo')
        res.json(todo)
      } else {
       res.status(404).send({ error: 'todo ' + id + ' not found in DB' })
