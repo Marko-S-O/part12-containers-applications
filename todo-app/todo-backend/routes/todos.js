@@ -48,7 +48,6 @@ singleRouter.delete('/', async (req, res) => {
 
 /* GET todo. */
 singleRouter.get('/', (req, res) => {
-  console.log('get /:id')
   res.json(req.todo)
 });
 
