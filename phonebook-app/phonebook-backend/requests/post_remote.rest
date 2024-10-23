@@ -1,0 +1,7 @@
+POST https://fullstackopen-part3-d2xl.onrender.com/api/persons
+Content-Type: application/json
+
+{
+    "name": "Arto Hella",
+    "number": "123 456 7890"
+}

@@ -1,0 +1,4 @@
+{
+    "watch": [".", "mongo", "models"],
+    "ext": "js"
+}
